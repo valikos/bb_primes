@@ -1,6 +1,8 @@
 class PrimeApp.Models.Prime extends Backbone.Model
 
   primes: []
+  start: null
+  end: null
 
   initialize: ->
     @primes = []
@@ -20,7 +22,7 @@ class PrimeApp.Models.Prime extends Backbone.Model
   generate: (from, limit) ->
     this._resetPrimes
     primes = this._eratosphen limit
-    @primes = _.compact(primes.slice(from, limit))
+    @primes = _.compact(primes.slice(from, limit+1))
 
   _eratosphen: (n, options) ->
     # create sieve
@@ -39,5 +41,3 @@ class PrimeApp.Models.Prime extends Backbone.Model
 
   _resetPrimes: ->
     this.primes = []
-
-window.myPrime = new PrimeApp.Models.Prime

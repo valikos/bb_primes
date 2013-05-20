@@ -2,7 +2,8 @@ class PrimeApp.Views.Forms.Generator extends Backbone.View
   el: '#prime-generator'
 
   events:
-    "submit": "submit"
+    "submit": "submit",
+    "reset": "reset"
 
   primes: {}
 
@@ -20,3 +21,7 @@ class PrimeApp.Views.Forms.Generator extends Backbone.View
     @model.generate(range[0], range[1])
 
     @primes.showResults()
+
+  reset: (e) ->
+    e.preventDefault()
+    @primes.removePrimes()

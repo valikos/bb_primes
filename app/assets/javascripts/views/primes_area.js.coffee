@@ -11,3 +11,6 @@ class PrimeApp.Views.PrimesArea extends Backbone.View
     @clearResults()
     for prime in @model.primes
       this.$el.append(this.templates["primes"]({item: prime}))
+
+  removePrimes: ->
+    this.$el.html('')
