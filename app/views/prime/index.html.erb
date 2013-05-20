@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="span6">
+    <div class="well">
+      <h1>Prime generator</h1>
+        <form accept-charset="UTF-8" action="" id="prime-generator" method="get">
+          <div class='input-prepend input-append'>
+            <span class='add-on'>from</span>
+            <input class="input-small" id="prime_first" name="first" size="30" type="text" />
+            <span class='add-on'>to</span>
+            <input class="input-small" id="prime_last" name="last" size="30" type="text" />
+            <input class="btn" name="commit" type="submit" value="Show" />
+          </div>
+        </form>
+    </div>
+  </div>
+  <div class="span6">
+    <div class="well">
+      <h1>Check prime</h1>
+      <form accept-charset="UTF-8" action="" id="prime-checker" method="get">
+        <div class='input-append'>
+        <input class="input-small" id="prime_number" name="checker" size="30" type="number" />
+        <input class="btn" name="commit" type="submit" value="Check" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="span12" id="primes-area">
+  </div>
+</div>
+
+<script type="text/template" id="prime_number_widget">
+  <div class="alert alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Prime</strong>
+  </div>
+</script>
+<script type="text/template" id="complex_number_widget">
+  <div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Complex</strong>
+  </div>
+</script>
